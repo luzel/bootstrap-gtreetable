@@ -1,3 +1,11 @@
+/* ========================================================= 
+ * bootstrap-gtreetable v2.2.1-alpha
+ * https://github.com/gilek/bootstrap-gtreetable
+ * ========================================================= 
+ * Copyright 2014 Maciej Kłak
+ * Licensed under MIT (https://github.com/gilek/bootstrap-gtreetable/blob/master/LICENSE)
+ * ========================================================= */
+
 (function ($) {
     // GTREETABLE CLASSES DEFINITION
     // =============================    
@@ -475,7 +483,7 @@
 
             $.each(this.manager.actions, function (index, action) {
                 that.$node.find('.' + that.manager.options.classes.action + '-' + index).click(function (event) {
-                    action.event(that, that.manager);
+                    action.event(that, that.manager, event);
                 });
             });
 
